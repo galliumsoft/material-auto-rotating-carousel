@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TeamWertarbyte/material-auto-rotating-carousel.git"
+    "url": "git+https://github.com/galliumsoft/material-auto-rotating-carousel.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "Wertarbyte <kontakt@wertarbyte.com> (https://wertarbyte.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TeamWertarbyte/material-auto-rotating-carousel/issues"
+    "url": "https://github.com/galliumsoft/material-auto-rotating-carousel/issues"
   },
-  "homepage": "https://github.com/TeamWertarbyte/material-auto-rotating-carousel#readme",
+  "homepage": "https://github.com/galliumsoft/material-auto-rotating-carousel#readme",
   "devDependencies": {
     "@material-ui/core": "^3.6.0",
     "@material-ui/icons": "^3.0.0",
