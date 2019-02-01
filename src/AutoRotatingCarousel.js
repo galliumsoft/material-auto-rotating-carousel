@@ -110,8 +110,15 @@ const styles = {
 
 class AutoRotatingCarousel extends Component {
   state = {
-    slideIndex: 0
+    slideIndex: this.props.slidePosition?this.props.slidePosition:0
   }
+
+  componentDidUpdate(prevProps){
+  if(prevProps.slidePosition!==this.props.slidePosition){
+    //Perform some operation
+    this.setState({slideIndex: this.props.slidePosition}, this.onChange(this.props.slidePosition));
+  }
+}
 
   handleContentClick = (e) => e.stopPropagation() || e.preventDefault()
 
@@ -263,7 +270,7 @@ AutoRotatingCarousel.defaultProps = {
   interval: 3000,
   mobile: false,
   open: false,
-  hideArrows: false
+  hideArrows: false,
 }
 
 AutoRotatingCarousel.propTypes = {
@@ -291,10 +298,13 @@ AutoRotatingCarousel.propTypes = {
   onClose: PropTypes.func,
   /** Fired when the user clicks the getting started button. */
   onStart: PropTypes.func,
+  /** Custom control to increment or decrement. */
+  slidePosition: PropTypes.number,
   /** Controls whether the AutoRotatingCarousel is opened or not. */
   open: PropTypes.bool,
   /** If `true`, the left and right arrows are hidden in the desktop version. */
-  hideArrows: PropTypes.bool
+  hideArrows: PropTypes.bool,
+
 }
 
 export default withStyles(styles)(AutoRotatingCarousel)
