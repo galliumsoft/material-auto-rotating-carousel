@@ -92,6 +92,8 @@ function Slide (props) {
     title,
     mobile,
     landscape,
+    label,
+    onStart
     ...other
   } = props
 
@@ -131,6 +133,13 @@ function Slide (props) {
         <Typography className={classes.subtitle}>
           {subtitle}
         </Typography>
+        {label && <Button
+          variant='contained'
+          onClick={onStart}
+          {...ButtonProps}
+        >
+          {label}
+        </Button>}
       </div>
     </div>
   )
@@ -157,6 +166,10 @@ Slide.propTypes = {
    * Title of the slide.
    */
   title: PropTypes.string.isRequired,
+  /** Button text. If not supplied, the button will be hidden. */
+  label: PropTypes.string,
+  /** Fired when the user clicks the getting started button. */
+  onStart: PropTypes.func,
   /**
    * If `true`, the screen width and height is filled.
    * @ignore

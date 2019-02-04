@@ -157,13 +157,12 @@ class AutoRotatingCarousel extends Component {
       containerStyle,
       hideArrows,
       interval,
-      label,
       landscape: landscapeProp,
       mobile,
       ModalProps,
       open,
       onClose,
-      onStart
+
     } = this.props
     const landscape = mobile && landscapeProp
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
@@ -214,20 +213,14 @@ class AutoRotatingCarousel extends Component {
               className={classes.carouselWrapper}>
               {carousel}
             </Paper>
-            <div style={landscape ? { minWidth: 300, maxWidth: 'calc(50% - 48px)', padding: 24, float: 'right' } : null}>
+            <div style={landscape ? { minWidth: 300, maxWidth: 'calc(50% - 28px)', padding: 24, float: 'right' } : null}>
               <div
                 className={classNames(classes.footer, {
                   [classes.footerMobile]: mobile,
                   [classes.footerMobileLandscape]: landscape
                 })}
               >
-                {label && <Button
-                  variant='contained'
-                  onClick={onStart}
-                  {...ButtonProps}
-                >
-                  {label}
-                </Button>}
+
                 {
                   hasMultipleChildren &&
                   <Dots
@@ -284,8 +277,6 @@ AutoRotatingCarousel.propTypes = {
   containerStyle: PropTypes.object,
   /** Delay between auto play transitions (in ms). */
   interval: PropTypes.number,
-  /** Button text. If not supplied, the button will be hidden. */
-  label: PropTypes.string,
   /** If `true`, slide will adjust content for wide mobile screens. */
   landscape: PropTypes.bool,
   /** If `true`, the screen width and height is filled. */
@@ -296,8 +287,6 @@ AutoRotatingCarousel.propTypes = {
   onChange: PropTypes.func,
   /** Fired when the gray background of the popup is pressed when it is open. */
   onClose: PropTypes.func,
-  /** Fired when the user clicks the getting started button. */
-  onStart: PropTypes.func,
   /** Custom control to increment or decrement. */
   slidePosition: PropTypes.number,
   /** Controls whether the AutoRotatingCarousel is opened or not. */
