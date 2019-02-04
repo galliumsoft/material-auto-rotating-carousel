@@ -93,7 +93,7 @@ function Slide (props) {
     mobile,
     landscape,
     label,
-    onStart
+    onStart,
     ...other
   } = props
 
