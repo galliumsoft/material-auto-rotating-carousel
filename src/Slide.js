@@ -141,7 +141,7 @@ function Slide (props) {
       {label && <Button
         variant='contained'
         onClick={onStart}
-        style={{alignSelf: 'flex-end', marginBottom: 10}}
+        style={{alignSelf: 'flex-end', marginTop: 20, marginBottom: 10}}
         {...ButtonProps}
       >
         {label}
