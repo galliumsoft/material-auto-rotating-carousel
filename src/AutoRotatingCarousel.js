@@ -151,7 +151,6 @@ class AutoRotatingCarousel extends Component {
   render () {
     const {
       autoplay,
-      ButtonProps,
       children,
       classes,
       containerStyle,
@@ -269,8 +268,7 @@ AutoRotatingCarousel.defaultProps = {
 AutoRotatingCarousel.propTypes = {
   /** If `false`, the auto play behavior is disabled. */
   autoplay: PropTypes.bool,
-  /** Properties applied to the [Button](https://material-ui.com/api/button/) element. */
-  ButtonProps: PropTypes.object,
+
   /** Object for customizing the CSS classes. */
   classes: PropTypes.object.isRequired,
   /** Override the inline-styles of the carousel container. */

@@ -86,6 +86,7 @@ const styles = {
 function Slide (props) {
   const {
     classes,
+    ButtonProps,
     media,
     mediaBackgroundStyle,
     subtitle,
@@ -150,6 +151,8 @@ Slide.propTypes = {
    * Useful to extend the style applied to components.
    */
   classes: PropTypes.object.isRequired,
+  /** Properties applied to the [Button](https://material-ui.com/api/button/) element. */
+  ButtonProps: PropTypes.object,
   /**
    * Object to display in the upper half.
    */
