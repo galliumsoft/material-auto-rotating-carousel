@@ -9,7 +9,9 @@ import classNames from 'classnames'
 const styles = {
   root: {
     backgroundColor: blue[500],
-    height: '100%'
+    height: '100%',
+    display:'flex',
+    flexDirection: 'column'
   },
   rootMobileLandscape: {
     width: '100%',
@@ -135,15 +137,15 @@ function Slide (props) {
         <Typography className={classes.subtitle}>
           {subtitle}
         </Typography>
-        {label && <Button
-          variant='contained'
-          onClick={onStart}
-          style={{alignSelf: 'flex-end', marginBottom: 10}}
-          {...ButtonProps}
-        >
-          {label}
-        </Button>}
       </div>
+      {label && <Button
+        variant='contained'
+        onClick={onStart}
+        style={{alignSelf: 'flex-end', marginBottom: 10}}
+        {...ButtonProps}
+      >
+        {label}
+      </Button>}
     </div>
   )
 }
