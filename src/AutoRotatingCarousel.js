@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
 import { grey } from '@material-ui/core/colors'
 import withStyles from '@material-ui/core/styles/withStyles'
