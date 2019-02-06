@@ -90,6 +90,8 @@ function Slide (props) {
   const {
     classes,
     ButtonProps,
+    titleTypographyProps,
+    subtitleTypographyProps,
     media,
     mediaBackgroundStyle,
     subtitle,
@@ -131,12 +133,12 @@ function Slide (props) {
           [classes.textMobileLandscape]: mobileLandscape
         })}
       >
-        <span className={classes.title}>
+        <Typography variant='h5' className={classes.title} {...titleTypographyProps}>
           {title}
-        </span>
-        <span className={classes.subtitle}>
+        </Typography>
+        <Typography variant='h6' className={classes.subtitle} {...subtitleTypographyProps}>
           {subtitle}
-        </span>
+        </Typography>
       </div>
       {label && <Button
         variant='contained'
@@ -157,6 +159,10 @@ Slide.propTypes = {
   classes: PropTypes.object.isRequired,
   /** Properties applied to the [Button](https://material-ui.com/api/button/) element. */
   ButtonProps: PropTypes.object,
+  /** Properties applied to the title element. */
+  titleTypographyProps: PropTypes.object,
+  /** Properties applied to the subtitle element. */
+  subtitleTypographyProps: PropTypes.object,
   /**
    * Object to display in the upper half.
    */
