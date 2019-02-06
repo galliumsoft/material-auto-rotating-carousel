@@ -76,13 +76,13 @@ const styles = {
     paddingTop: 20
   },
   footer: {
-    marginTop: -72,
+    marginTop: -32,
     width: '100%',
     position: 'relative',
     textAlign: 'center'
   },
   footerMobile: {
-    marginTop: -92
+    marginTop: -52
   },
   footerMobileLandscape: {
     marginTop: -3,
