@@ -168,11 +168,11 @@ Slide.propTypes = {
   /**
    * Subtitle of the slide.
    */
-  subtitle: PropTypes.node.isRequired,
+  subtitle: PropTypes.any.isRequired,
   /**
    * Title of the slide.
    */
-  title: PropTypes.node.isRequired,
+  title: PropTypes.any.isRequired,
   /** Button text. If not supplied, the button will be hidden. */
   label: PropTypes.node,
   /** Fired when the user clicks the getting started button. */
