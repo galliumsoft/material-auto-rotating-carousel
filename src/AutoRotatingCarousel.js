@@ -66,23 +66,23 @@ const styles = {
     height: '100%'
   },
   dots: {
-    paddingTop: 36,
+    paddingTop: 16,
     margin: '0 auto'
   },
   dotsMobile: {
     paddingTop: 0
   },
   dotsMobileLandscape: {
-    paddingTop: 20
+    paddingTop: 10
   },
   footer: {
-    marginTop: -32,
+    marginTop: -72,
     width: '100%',
     position: 'relative',
     textAlign: 'center'
   },
   footerMobile: {
-    marginTop: -52
+    marginTop: -92
   },
   footerMobileLandscape: {
     marginTop: -3,
