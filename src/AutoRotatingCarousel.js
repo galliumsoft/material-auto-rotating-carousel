@@ -165,7 +165,8 @@ class AutoRotatingCarousel extends Component {
     const landscape = mobile && landscapeProp
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
     const hasMultipleChildren = children.length != null
-
+    console.log('mobile: ', mobile)
+    console.log('landscape: ', landscape)
     const carousel = (
       <Carousel
         autoplay={open && autoplay && hasMultipleChildren}
