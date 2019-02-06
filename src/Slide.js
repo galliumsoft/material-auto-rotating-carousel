@@ -133,10 +133,10 @@ function Slide (props) {
           [classes.textMobileLandscape]: mobileLandscape
         })}
       >
-        <Typography variant='h5' className={classes.title} {...titleTypographyProps}>
+        <Typography variant='h5' className={classes.title} {...TitleTypographyProps}>
           {title}
         </Typography>
-        <Typography variant='h6' className={classes.subtitle} {...subtitleTypographyProps}>
+        <Typography variant='h6' className={classes.subtitle} {...SubtitleTypographyProps}>
           {subtitle}
         </Typography>
       </div>
@@ -160,9 +160,9 @@ Slide.propTypes = {
   /** Properties applied to the [Button](https://material-ui.com/api/button/) element. */
   ButtonProps: PropTypes.object,
   /** Properties applied to the title element. */
-  titleTypographyProps: PropTypes.object,
+  TitleTypographyProps: PropTypes.object,
   /** Properties applied to the subtitle element. */
-  subtitleTypographyProps: PropTypes.object,
+  SubtitleTypographyProps: PropTypes.object,
   /**
    * Object to display in the upper half.
    */
