@@ -133,10 +133,16 @@ function Slide (props) {
           [classes.textMobileLandscape]: mobileLandscape
         })}
       >
-        <Typography variant='h5' className={classes.title} {...TitleTypographyProps}>
+        <Typography variant='h5'
+          className={classes.title}
+          {...TitleTypographyProps}
+          >
           {title}
         </Typography>
-        <Typography variant='h6' className={classes.subtitle} {...SubtitleTypographyProps}>
+        <Typography variant='h6'
+          className={classes.subtitle}
+          {...SubtitleTypographyProps}
+          >
           {subtitle}
         </Typography>
       </div>
