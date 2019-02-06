@@ -90,8 +90,8 @@ function Slide (props) {
   const {
     classes,
     ButtonProps,
-    titleTypographyProps,
-    subtitleTypographyProps,
+    TitleTypographyProps,
+    SubtitleTypographyProps,
     media,
     mediaBackgroundStyle,
     subtitle,
