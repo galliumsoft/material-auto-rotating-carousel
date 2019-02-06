@@ -68,9 +68,9 @@ const styles = {
     margin: 0
   },
   title: {
-    fontSize: '24px',
+    fontSize: '26px',
     fontWeight: 700,
-    lineHeight: '32px',
+    lineHeight: '34px',
     marginBottom: 12,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -78,9 +78,9 @@ const styles = {
     color: '#fff'
   },
   subtitle: {
-    fontSize: '15px',
+    fontSize: '16px',
     fontWeight: 400,
-    lineHeight: '18px',
+    lineHeight: '19px',
     margin: 0,
     color: '#fff'
   }
@@ -131,12 +131,12 @@ function Slide (props) {
           [classes.textMobileLandscape]: mobileLandscape
         })}
       >
-        <Typography className={classes.title}>
+        <span className={classes.title}>
           {title}
-        </Typography>
-        <Typography className={classes.subtitle}>
+        </span>
+        <span className={classes.subtitle}>
           {subtitle}
-        </Typography>
+        </span>
       </div>
       {label && <Button
         variant='contained'
