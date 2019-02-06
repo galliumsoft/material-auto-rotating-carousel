@@ -23,7 +23,7 @@ const styles = {
   content: {
     width: '60%',
     maxWidth: 700,
-    height: 'calc(100% - 46px)',
+    height: 'calc(100% - 96px)',
     maxHeight: 600,
     margin: '-16px auto 0',
     position: 'relative',
@@ -66,14 +66,14 @@ const styles = {
     height: '100%'
   },
   dots: {
-    paddingTop: 16,
+    paddingTop: 32,
     margin: '0 auto'
   },
   dotsMobile: {
     paddingTop: 0
   },
   dotsMobileLandscape: {
-    paddingTop: 10
+    paddingTop: 20
   },
   footer: {
     marginTop: -72,
@@ -162,11 +162,11 @@ class AutoRotatingCarousel extends Component {
       onClose,
 
     } = this.props
-    const landscape = mobile && landscapeProp
+    const landscape = (mobile && landscapeProp).toString()
+    const ismobile = mobile.toString()
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
     const hasMultipleChildren = children.length != null
-    console.log('mobile: ', mobile)
-    console.log('landscape: ', landscape)
+
     const carousel = (
       <Carousel
         autoplay={open && autoplay && hasMultipleChildren}
@@ -179,7 +179,7 @@ class AutoRotatingCarousel extends Component {
       >
         {
           React.Children.map(children, c => React.cloneElement(c, {
-            mobile,
+            ismobile,
             landscape
           }))
         }
@@ -212,7 +212,7 @@ class AutoRotatingCarousel extends Component {
               className={classes.carouselWrapper}>
               {carousel}
             </Paper>
-            <div style={landscape ? { minWidth: 300, maxWidth: 'calc(50% - 28px)', padding: 24, float: 'right' } : null}>
+            <div style={landscape ? { minWidth: 300, maxWidth: 'calc(50% - 28px)', padding: 5, margin: 5, float: 'right' } : null}>
               <div
                 className={classNames(classes.footer, {
                   [classes.footerMobile]: mobile,

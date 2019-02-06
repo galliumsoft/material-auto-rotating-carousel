@@ -10,8 +10,7 @@ const styles = {
   root: {
     backgroundColor: blue[500],
     height: '100%',
-    display:'flex',
-    flexDirection: 'column'
+
   },
   rootMobileLandscape: {
     width: '100%',
@@ -147,7 +146,7 @@ function Slide (props) {
       {label && <Button
         variant='contained'
         onClick={onStart}
-        style={{alignSelf: 'flex-end', marginTop: 20, marginBottom: 10}}
+        style={{ marginTop: 20, marginBottom: 10}}
         {...ButtonProps}
       >
         {label}
