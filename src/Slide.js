@@ -90,8 +90,6 @@ function Slide (props) {
   const {
     classes,
     ButtonProps,
-    TitleTypographyProps,
-    SubtitleTypographyProps,
     media,
     mediaBackgroundStyle,
     subtitle,
@@ -135,13 +133,13 @@ function Slide (props) {
       >
         <Typography variant='h5'
           className={classes.title}
-          {...TitleTypographyProps}
+
           >
           {title}
         </Typography>
         <Typography variant='h6'
           className={classes.subtitle}
-          {...SubtitleTypographyProps}
+
           >
           {subtitle}
         </Typography>
@@ -165,10 +163,7 @@ Slide.propTypes = {
   classes: PropTypes.object.isRequired,
   /** Properties applied to the [Button](https://material-ui.com/api/button/) element. */
   ButtonProps: PropTypes.object,
-  /** Properties applied to the title element. */
-  TitleTypographyProps: PropTypes.object,
-  /** Properties applied to the subtitle element. */
-  SubtitleTypographyProps: PropTypes.object,
+
   /**
    * Object to display in the upper half.
    */
@@ -180,11 +175,11 @@ Slide.propTypes = {
   /**
    * Subtitle of the slide.
    */
-  subtitle: PropTypes.any.isRequired,
+  subtitle: PropTypes.any,
   /**
    * Title of the slide.
    */
-  title: PropTypes.any.isRequired,
+  title: PropTypes.any,
   /** Button text. If not supplied, the button will be hidden. */
   label: PropTypes.node,
   /** Fired when the user clicks the getting started button. */
