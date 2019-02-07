@@ -10,7 +10,9 @@ const styles = {
   root: {
     backgroundColor: blue[500],
     height: '100%',
-
+    display:'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   rootMobileLandscape: {
     width: '100%',

@@ -162,7 +162,8 @@ class AutoRotatingCarousel extends Component {
       onClose,
 
     } = this.props
-    const landscape = (mobile && landscapeProp).toString()
+    const landscape = mobile && landscapeProp
+    const islandscape = landscape.toString()
     const ismobile = mobile.toString()
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
     const hasMultipleChildren = children.length != null
@@ -180,7 +181,7 @@ class AutoRotatingCarousel extends Component {
         {
           React.Children.map(children, c => React.cloneElement(c, {
             ismobile,
-            landscape
+            islandscape
           }))
         }
       </Carousel>
