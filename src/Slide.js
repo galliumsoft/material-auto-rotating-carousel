@@ -10,9 +10,7 @@ const styles = {
   root: {
     backgroundColor: blue[500],
     height: '100%',
-    display:'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+
   },
   rootMobileLandscape: {
     width: '100%',
@@ -145,6 +143,7 @@ function Slide (props) {
           {subtitle}
         </Typography>
       </div>
+      <div style={{display:'flex', justifyContent:'center'}}>
       {label && <Button
         variant='contained'
         onClick={onStart}
@@ -153,6 +152,7 @@ function Slide (props) {
       >
         {label}
       </Button>}
+      </div>
     </div>
   )
 }
