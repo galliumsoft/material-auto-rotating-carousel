@@ -67,7 +67,7 @@ const styles = {
   },
   dots: {
     paddingTop: 0,
-    margin: '-10px auto 0 auto'
+    margin: '-20px auto 0 auto'
   },
   dotsMobile: {
     paddingTop: 0
@@ -76,13 +76,13 @@ const styles = {
     paddingTop: 10
   },
   footer: {
-    marginTop: -52,
+    marginTop: -42,
     width: '100%',
     position: 'relative',
     textAlign: 'center'
   },
   footerMobile: {
-    marginTop: -72
+    marginTop: -62
   },
   footerMobileLandscape: {
     marginTop: -3,
