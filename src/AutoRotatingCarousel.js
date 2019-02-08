@@ -163,7 +163,7 @@ class AutoRotatingCarousel extends Component {
 
     } = this.props
     const landscape = mobile && landscapeProp
-    const islandscape = landscape.toString()
+    const islandscape = landscape?1:0
     const ismobile = mobile.toString()
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
     const hasMultipleChildren = children.length != null
