@@ -181,7 +181,7 @@ class AutoRotatingCarousel extends Component {
         {
           React.Children.map(children, c => React.cloneElement(c, {
             ismobile,
-            islandscape
+            landscape
           }))
         }
       </Carousel>
